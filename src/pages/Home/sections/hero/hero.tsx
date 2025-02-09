@@ -21,9 +21,9 @@ const Hero = () => {
   }));
 
   return (
-    <StyledHero>
+    <StyledHero >
       <Container>
-        <Grid container spacing={2} >
+        <Grid container spacing={4} >
           {/* Avatar */}
           <Grid item xs={8} sm={4}>
             <StyledImg src={avatar} />
@@ -34,23 +34,23 @@ const Hero = () => {
             <Typography
               color="primary"
               variant="h1"
-              style={{ fontFamily: "trebuchet MS, sans-serif" }}
+              style={{ fontFamily: "Heuvetica Neue" }}
             >
-              Guilherme Teodoro
+             Guilherme Teodoro
             </Typography>
             <Typography color="primary" variant="h2" >
               I'm a Software Engineer
             </Typography>
 
             {/* Button Section */}
-            <Grid container >
+            <Grid container display={"flex"} justifyContent={"center"} >
               <Grid item xs={12} sm={4} display={"flex"} justifyContent={"center"}>
                 <Button variant="contained" color="primary" startIcon={<DowloadIcon />}>
                   Download CV
                 </Button>
               </Grid>
               <Grid item xs={12} sm={4} display={"flex"} justifyContent={"center"}>
-                <Button variant="contained" color="secondary" startIcon={<EmailIcon />}>
+                <Button variant="contained" color="primary" startIcon={<EmailIcon />}>
                   Contact me
                 </Button>
               </Grid>
