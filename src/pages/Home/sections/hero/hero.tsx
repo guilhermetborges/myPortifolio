@@ -12,16 +12,23 @@ const Hero = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.up('md')]:{
+      paddingTop: "0px"
+    },
+    [theme.breakpoints.up('xs')]:{
+      paddingTop: "0px"
+
+    }
 
 
-  }));
+  }))
 
   const StyledImg = styled("img")(() => ({
-    width: "80%",
+    width: "75%",
     borderRadius: "70%",
     border: "0.5px solid white",
 
-  }));
+  }))
 
   return (
     <StyledHero >
@@ -47,13 +54,13 @@ const Hero = () => {
             {/* Button Section */}
             <Grid container display={"flex"} justifyContent={"center"}  spacing={4}>
               <Grid item xs={12} md={4} display={"flex"} justifyContent={"center"} >
-                <StyledButton  >
+                <StyledButton  onclick={() => console.log("Download")}>
                   <DowloadIcon style={{marginRight: "2px" }}   />
                   Download CV
                 </StyledButton>
               </Grid>
               <Grid item xs={12} md={4} display={"flex"} justifyContent={"center"}>
-                <StyledButton>
+                <StyledButton onclick={() => console.log("Contact")}>
                   <EmailIcon style={{marginRight: "10px" }}  />
                   Contact me
                 </StyledButton>
