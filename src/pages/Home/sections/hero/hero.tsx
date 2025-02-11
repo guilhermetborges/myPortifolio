@@ -17,8 +17,9 @@ const Hero = () => {
   }));
 
   const StyledImg = styled("img")(() => ({
-    width: "100%",
-    borderRadius: "80%",
+    width: "80%",
+    borderRadius: "70%",
+    border: "0.5px solid white",
 
   }));
 
@@ -27,28 +28,27 @@ const Hero = () => {
       <Container maxWidth="lg">
         <Grid container spacing={2} >
           {/* Avatar */}
-          <Grid item xs={12} md={4} >
-            <StyledImg src={avatar} />
+          <Grid item xs={12} md={4}>
+
+              <StyledImg src={avatar} />
+            
           </Grid>
 
           {/* Text Section */}
           <Grid item xs={12} md={8}>
             <Typography
-              color="primary.contrastText"
-              variant="h1"
-              style={{ fontFamily: "Heuvetica Neue" }}
-            >
+              color="primary.contrastText"variant="h1"  style={{ fontFamily: "Heuvetica Neue" }} pb={1}>
              Guilherme Teodoro
             </Typography>
-            <Typography color="primary.contrastText" variant="h2" style={{ marginBottom: "10px" }} >
+            <Typography color="primary.contrastText" variant="h2" style={{ marginBottom: "10px" }} pb={2}>
               I'm a Software Engineer
             </Typography>
 
             {/* Button Section */}
-            <Grid container display={"flex"} justifyContent={"center"}  spacing={2}>
+            <Grid container display={"flex"} justifyContent={"center"}  spacing={4}>
               <Grid item xs={12} md={4} display={"flex"} justifyContent={"center"} >
                 <StyledButton  >
-                  <DowloadIcon style={{marginRight: "10px" }}   />
+                  <DowloadIcon style={{marginRight: "2px" }}   />
                   Download CV
                 </StyledButton>
               </Grid>
@@ -58,6 +58,7 @@ const Hero = () => {
                   Contact me
                 </StyledButton>
               </Grid>
+              
             </Grid>
           </Grid>
         </Grid>
