@@ -1,5 +1,5 @@
 import NavBar from "../../componentes/styledButton/NavBar/NavBar";
-import Hero from "./sections/hero/Hero"
+import Hero from "./sections/hero/hero"
 
 const Home = () => {
     return (
